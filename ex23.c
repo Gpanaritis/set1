@@ -2,20 +2,20 @@
 
 int main()
 {
-int a[4],i,j,temp;
-for (i=0;i<4;i++)
- {
- printf("please enter number %d \n",i+1);
- scanf("%d",&a[i]);
- }
-for (i=1;i<=3;i++) //Θα φτιαξει μονο τα δυο πρωτα ψηφια
- {
- for (j=3;j>=i;j--)
+  int a[4],i,j,temp;
+  for (i=0;i<4;i++)
   {
-  if (a[j-1]<a[j]) {temp=a[j-1]; a[j-1]=a[j]; a[j]=temp;}
+    printf("please enter number %d \n",i+1);
+    scanf("%d",&a[i]);
   }
- }
-temp=a[0]+a[1];
-printf("The sum of the two highest is %d",temp);
-return 0;
+  for (i=1;i<=3;i++) //ΓΓ΅ Γ¶Γ΄Γ©Γ΅Γ®Γ¥Γ© Γ¬Γ―Γ­Γ― Γ΄Γ΅ Γ¤ΓµΓ― Γ°Γ±ΓΉΓ΄Γ΅ ΓΈΓ§Γ¶Γ©Γ΅
+  {
+    for (j=3;j>=i;j--)
+     {
+        if (a[j-1]<a[j]) {temp=a[j-1]; a[j-1]=a[j]; a[j]=temp;}
+     }
+  }
+  temp=a[0]+a[1];
+  printf("The sum of the two highest is %d",temp);
+  return 0;
 }
